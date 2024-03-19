@@ -35,10 +35,9 @@ const About = () => {
 
   return (
     <div>
-    
-    <AboutSearch searchQuery={searchQuery} searchFunction={searchFunction}/>
-    <AboutComponent filteredData={filteredData}/>
-    
+    <h2>This is without Redux</h2>
+      <AboutSearch searchQuery={searchQuery} searchFunction={searchFunction}/>
+      <AboutComponent filteredData={filteredData}/>
     </div>
   );
 };
