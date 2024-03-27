@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import AboutComponent from '../Components/AboutComponent/AboutComponent';
 import AboutSearch from '../Components/AboutComponent/AboutSearch';
+import Header from './Layout/Header';
 
 const About = () => {
   const [data, setData] = useState([]);
@@ -35,6 +36,7 @@ const About = () => {
 
   return (
     <div>
+            <Header></Header>
     <h2>This is without Redux</h2>
       <AboutSearch searchQuery={searchQuery} searchFunction={searchFunction}/>
       <AboutComponent filteredData={filteredData}/>

@@ -4,7 +4,7 @@ import axios from 'axios';
 import { setData, setFilteredData } from "./../state/slices/aboutSlice"; 
 import AboutComponent from '../Components/AboutComponent/AboutComponent';
 import AboutSearch from '../Components/AboutComponent/AboutSearch';
-
+import Header from './Layout/Header';
 const AboutRedux = () => {
     const dispatch = useDispatch();
     const data = useSelector((state) => state.about.data);
@@ -33,7 +33,9 @@ const AboutRedux = () => {
   
     return (
       <div>
-            <h2>This is with Redux</h2>
+
+        <Header></Header>
+          <h2>This is with Redux</h2>
 
         <AboutSearch searchFunction={searchFunction} />
         <AboutComponent filteredData={filteredData} />
