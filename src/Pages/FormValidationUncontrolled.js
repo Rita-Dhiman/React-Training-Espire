@@ -46,6 +46,7 @@ const FormValidationControlled = () => {
 
   return (
     <div>
+
       <Header/>
       <h2>Controlled Components</h2>
       <form onSubmit={formSubmit}>

@@ -8,9 +8,13 @@
   height: 40vmin;
   pointer-events: none;
 }
-.headerBg{
-  background-color: red;
+.showhide{
+  display: block;
+  margin: 10px;
 }
+.yesbg{background-color: black; color: #fff;}
+
+.nobg{background-color: red; color: #fff;}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

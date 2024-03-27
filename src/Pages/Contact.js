@@ -17,21 +17,21 @@ const ContactPage = () => {
       <Header></Header>
       <h1>Contact Us</h1>
 
-      {/* <ListGroup>
+      <ListGroup>
       {filteredData.map((item, index) => (
         <ListGroup.Item key={index}><strong>Title:</strong> {item.title}</ListGroup.Item>
           
         ))}
-    </ListGroup> */}
+    </ListGroup>
 
-
+{/* 
       <ul>
         {filteredData.map((item, index) => (
           <li key={index}>
             <strong>Title:</strong> {item.title} 
           </li>
         ))}
-      </ul> 
+      </ul> */}
     </div>
   );
 };
