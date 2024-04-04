@@ -3,12 +3,14 @@ import axios from 'axios';
 
 const NodePostAPI = () => {
   const [formData, setFormData] = useState({ id: '', name: '' });
+  const apiUrl = process.env.REACT_APP_API_URL;
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     
     try {
-      const response = await axios.post('http://localhost:5000/api/add', formData);
+      const response = await axios.post(`${apiUrl}add`, formData);
       console.log(response.data); 
     } catch (error) {
       console.error('Error:', error);
