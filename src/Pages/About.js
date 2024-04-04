@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import AboutComponent from '../Components/AboutComponent/AboutComponent';
 import AboutSearch from '../Components/AboutComponent/AboutSearch';
-import Header from './Layout/Header';
 
 const About = () => {
   const [data, setData] = useState([]);
@@ -12,7 +11,7 @@ const About = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
+        const response = await axios.get('http://localhost:5000/api');
         setData(response.data);
         setFilteredData(response.data); 
       } catch (error) {
@@ -36,10 +35,10 @@ const About = () => {
 
   return (
     <div>
-            <Header></Header>
-    <h2>This is without Redux</h2>
-      <AboutSearch searchQuery={searchQuery} searchFunction={searchFunction}/>
-      <AboutComponent filteredData={filteredData}/>
+    
+    <AboutSearch searchQuery={searchQuery} searchFunction={searchFunction}/>
+    <AboutComponent filteredData={filteredData}/>
+    
     </div>
   );
 };

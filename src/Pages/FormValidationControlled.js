@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
 import Header from './Layout/Header';
 
 const FormValidationControlled = () => {
@@ -22,7 +20,6 @@ const FormValidationControlled = () => {
     e.preventDefault();
     const errors = validateFormData(formData);
     if (Object.keys(errors).length === 0) {
-      // Form submission logic here
       console.log('Form submitted successfully!');
     } else {
       setErrors(errors);
@@ -32,7 +29,6 @@ const FormValidationControlled = () => {
   const validateFormData = (data) => {
     const errors = {};
 
-    // Username validation
     if (!data.username.trim()) {
       errors.username = 'Username is required';
     } else if (!/^[a-zA-Z0-9]+$/.test(data.username)) {

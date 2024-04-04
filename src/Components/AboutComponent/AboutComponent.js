@@ -7,7 +7,7 @@ const AboutComponent = ({filteredData}) => {
       <ul>
         {filteredData.map((item, index) => (
           <li key={index}>
-            <strong>Title:</strong> {item.title} | <strong>Body:</strong> {item.body}
+            <strong>Id:</strong> {item.id} | <strong>Name:</strong> {item.name}
           </li>
         ))}
       </ul>
